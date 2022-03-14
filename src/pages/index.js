@@ -1,3 +1,5 @@
 import Home from './Home';
+import Layouting from './Layouting';
+import AxiosPage from './AxiosPage';
 
-export {Home};
+export {Home, Layouting, AxiosPage};

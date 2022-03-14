@@ -1,12 +1,14 @@
 import {StyleSheet, Text, View, Pressable, Image} from 'react-native';
 import React, {useState} from 'react';
 import {Angka} from '../../components';
+import {color} from 'react-native-reanimated';
 
-const Home = () => {
+const Home = props => {
   const [angka, setAngka] = useState(0);
 
   const tambah = () => setAngka(angka + 1);
   const kurang = () => setAngka(angka - 1);
+  const goToAxiosPage = () => props.navigation.navigate('AxiosPage');
 
   return (
     <View style={styles.container}>
@@ -28,6 +30,11 @@ const Home = () => {
           uri: 'https://unalux.files.wordpress.com/2012/04/hideyoshi.jpg',
         }}
       />
+      <Pressable
+        style={[styles.button, styles.buttonHalaman]}
+        onPress={goToAxiosPage}>
+        <Text style={styles.buttonText}>Halaman Axios</Text>
+      </Pressable>
     </View>
   );
 };
@@ -56,10 +63,13 @@ const styles = StyleSheet.create({
   button: {
     marginTop: 16,
     backgroundColor: 'blue',
-    width: 100,
+    width: 150,
     alignItems: 'center',
     paddingHorizontal: 10,
     paddingVertical: 10,
+  },
+  buttonHalaman: {
+    backgroundColor: 'red',
   },
   buttonText: {
     color: 'white',
