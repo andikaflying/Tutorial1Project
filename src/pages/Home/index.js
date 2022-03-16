@@ -1,5 +1,5 @@
 import {StyleSheet, Text, View, Pressable, Image} from 'react-native';
-import React, {useState} from 'react';
+import React, {useState, useContext, createContext} from 'react';
 import {Angka} from '../../components';
 import {color} from 'react-native-reanimated';
 
@@ -9,6 +9,7 @@ const Home = props => {
   const tambah = () => setAngka(angka + 1);
   const kurang = () => setAngka(angka - 1);
   const goToAxiosPage = () => props.navigation.navigate('AxiosPage');
+  const goToContextPage = () => props.navigation.navigate('ContextPage');
 
   return (
     <View style={styles.container}>
@@ -34,6 +35,11 @@ const Home = props => {
         style={[styles.button, styles.buttonHalaman]}
         onPress={goToAxiosPage}>
         <Text style={styles.buttonText}>Halaman Axios</Text>
+      </Pressable>
+      <Pressable
+        style={[styles.button, styles.buttonHalaman]}
+        onPress={goToContextPage}>
+        <Text style={styles.buttonText}>Halaman Context</Text>
       </Pressable>
     </View>
   );
