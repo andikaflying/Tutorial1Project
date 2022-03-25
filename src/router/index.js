@@ -1,13 +1,13 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Home, Layouting, AxiosPage, ContextPage, VideoPage} from '../pages';
+import {Home, Layouting, AxiosPage, ContextPage, VideoPage, PDFPage, Todo} from '../pages';
 
 const Stack = createNativeStackNavigator();
 
 const Router = () => {
   return (
-    <Stack.Navigator initialRouteName="VideoPage">
+    <Stack.Navigator initialRouteName="Todo">
       <Stack.Screen
         name="Home"
         component={Home}
@@ -31,6 +31,16 @@ const Router = () => {
       <Stack.Screen
         name="VideoPage"
         component={VideoPage}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="PDFPage"
+        component={PDFPage}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Todo"
+        component={Todo}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

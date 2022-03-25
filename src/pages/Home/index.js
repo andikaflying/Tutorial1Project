@@ -10,6 +10,7 @@ const Home = props => {
   const kurang = () => setAngka(angka - 1);
   const goToAxiosPage = () => props.navigation.navigate('AxiosPage');
   const goToContextPage = () => props.navigation.navigate('ContextPage');
+  const goToPDFPage = () => props.navigation.navigate('PDFPage');
 
   return (
     <View style={styles.container}>
@@ -40,6 +41,11 @@ const Home = props => {
         style={[styles.button, styles.buttonHalaman]}
         onPress={goToContextPage}>
         <Text style={styles.buttonText}>Halaman Context</Text>
+      </Pressable>
+      <Pressable
+        style={[styles.button, styles.buttonHalaman]}
+        onPress={goToPDFPage}>
+        <Text style={styles.buttonText}>Halaman PDF</Text>
       </Pressable>
     </View>
   );

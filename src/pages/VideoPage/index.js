@@ -14,6 +14,9 @@ const VideoPage = () => {
           width: 300,
           height: 300,
         }}
+        controls={true}
+        fullscreen={true}
+        poster="https://st3.depositphotos.com/3356953/13947/v/600/depositphotos_139474006-stock-illustration-crazy-smiley-sign.jpg" 
       />
     </View>
   );

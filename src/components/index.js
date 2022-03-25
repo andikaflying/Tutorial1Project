@@ -1,3 +1,4 @@
 import Angka from './Angka';
+import TodoParentComponent from './TodoParentComponent';
 
-export {Angka};
+export {Angka, TodoParentComponent};
